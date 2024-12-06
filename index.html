@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Conversor de moeda Awesome API</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <script src="js/scripts.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Conversor de Moedas</h1>
+        </header>
+        <div class="container">
+            <div class="form-container">
+                <div class="currencys">
+                    <select name="currency1" id="currency1">
+                        <option value="">Selecione uma moeda</option>
+                    </select>
+                    <p>Para</p>
+                    <select name="currency2" id="currency2">
+                        <option value="">Selecione uma moeda</option>
+                    </select>
+                </div>
+                <input
+                    type="number"
+                    name="value"
+                    id="value"
+                    placeholder="Digite o valor a ser convertido" />
+                <button class="btn">Converter</button>
+            </div>
+            <div class="result hide">
+                <p>Valor Convertido:</p>
+                <p class="value"></p>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; Daniel Antunes 2024</p>
+        </footer>
+    </body>
+</html>
