@@ -12,9 +12,13 @@ let currencySelect2 = "";
 const url = "https://economia.awesomeapi.com.br/";
 
 const getCurrencys = async () => {
+    btn.setAttribute("disabled", "");
+    btn.innerText = "Carregando...";
     const response = await fetch(`${url}available/uniq`);
 
     const data = await response.json();
+    btn.removeAttribute("disabled");
+    btn.innerText = "Converter";
     return data;
 };
 
@@ -42,8 +46,12 @@ const initialize = async () => {
 const getQuote = async (currency1, currency2) => {
     currencyPair = `${currency1}-${currency2}`;
     key = `${currency1}${currency2}`;
+    btn.setAttribute("disabled", "");
+    btn.innerText = "Carregando...";
     const response = await fetch(`${url}json/last/${currencyPair}`);
     const data = await response.json();
+    btn.removeAttribute("disabled");
+    btn.innerText = "Converter";
     if (data.status === 404) return;
     return data[key].bid;
 };

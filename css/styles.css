@@ -78,6 +78,11 @@ button:hover {
     color: #082b63;
 }
 
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
 .result {
     width: 100%;
     max-width: 600px;
